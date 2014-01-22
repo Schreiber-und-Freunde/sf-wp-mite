@@ -119,6 +119,11 @@ class SfWpMite
 	}
 
 	private function test() {
+		if ( ! wp_verify_nonce( $_REQUEST['_wpnonce'] , 'sfwp_mite_action_test' ) ) {
+			wp_die( __('Nonce check failed', 'sf_wp_mite') );
+			return;
+		}
+
 		if( !$this->is_ready ) {
 			return false;
 		}
