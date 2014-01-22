@@ -1,6 +1,6 @@
 <?
 /*
-Plugin Name: WP mite.
+Plugin Name: S&F Wordpress mite.
 Description: mite. API Integration for Wordpress
 Version: 0.1
 Author: Schreiber & Freunde GmbH
