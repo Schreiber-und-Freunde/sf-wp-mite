@@ -95,8 +95,11 @@ class SfWpMite
 						<td><input name="mite_api_key" id="mite_api_key" type="text" value="<? echo get_option('mite_api_key') ?>" /></td>
 					</tr>
 					<tr>
-						<th><label for="mite_account_name"><? _e('Account name (<strong>demo</strong>.mite.yo.lk)', 'sf_wp_mite') ?></label></th>
-						<td><input name="mite_account_name" id="mite_account_name" type="text" value="<? echo get_option('mite_account_name') ?>" /></td>
+						<th><label for="mite_account_name"><? _e('Account name', 'sf_wp_mite') ?></label></th>
+						<td>
+							<input name="mite_account_name" id="mite_account_name" type="text" value="<? echo get_option('mite_account_name') ?>" />
+							<p class="description"><? _e('<strong>demo</strong>.mite.yo.lk (only the first part)', 'sf_wp_mite') ?></p>
+						</td>
 					</tr>
 				</table>
 				<p class="submit"><input type="submit" value="<? _e('Save Settings', 'sf_wp_mite') ?>" class="button-primary" /></p>
@@ -120,7 +123,7 @@ class SfWpMite
 			return false;
 		}
 
-		$this->result = $this->do_request('time_entries.xml?group_by=year');
+		$this->result = $this->do_request('time_entries.json?group_by=year');
 	}
 
 	public function do_request($method) {
