@@ -1,4 +1,4 @@
-wp-mite
+sf-wp-mite
 =======
 
 mite. API Integration for Wordpress
