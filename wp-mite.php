@@ -149,4 +149,7 @@ class SfWpMite
 	}
 }
 $sf_wp_mite = SfWpMite::instance();
+function mite_get_time_entries_by_year() {
+	return json_decode( SfWpMite::instance()->do_request( 'time_entries.json?group_by=year' ) );
+}
 ?>
